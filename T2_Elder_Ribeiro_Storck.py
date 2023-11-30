@@ -57,6 +57,22 @@ Info_group = dict[str, list[str]]
 #def get_artists_info(df: pd.DataFrame) -> dict[Info_artist]:
 #  return dict([('db_ator', df.db_ator.drop_duplicates().to_list()),('db_dataNascAtor', df.db_dataNascAtor)])
 
+"""
+def get_atores_info(df: pd.DataFrame) -> dict[Info_atores]:
+    return dict([('db_ator',df[A,B].db_ator.drop_duplicates().to_list()),('db_dataNascAtor',df.db_dataNascAtor)])
+
+#def get_atores_info(df: pd.DataFrame) -> dict[Info_atores]:
+#    return dict([('db_ator',df[A,B].db_ator.drop_duplicates().to_list()),('db_dataNascAtor',df.db_dataNascAtor)])
+
+def encontrar_chave_por_valor(artists_info: dict[str, Info_atores], nome_ator: str) -> str | None:
+    #pprint(artists_info["db_ator"])
+    #test = {key for key in artists_info["db_ator"] : value for value in list(artists_info["db_dataNascAtor"])}
+    mylist = list(zip(artists_info["db_ator"], list(artists_info["db_dataNascAtor"])))
+    mydict = {tup[0]: tup[1] for tup in mylist}
+    pprint(mydict)
+"""
+
+
 def get_artists_info(df: pd.DataFrame) -> dict:
     artists_info = {'db_ator': df['db_ator'].drop_duplicates().tolist(), 'db_dataNascAtor': df['db_dataNascAtor'].tolist()}
     return artists_info
